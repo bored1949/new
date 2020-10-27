@@ -50,15 +50,26 @@ int main()
     cout << "enter a number to find factors until" << endl;
     int n;
     cin >> n;
-    cout << "for prime enter '1' else enter '2'" << endl;
-    int ok;
-    cin >> ok;
-    if(ok == 1)
+    while(1)
     {
-        prime(n);
-    }
-    if(ok == 2)
-    {
-        all(n);
-    }
+        cout << "for prime enter '1' else enter '2'" << endl;
+        int ok;
+        cin >> ok;
+        if(ok == 1)
+        {
+            prime(n);
+            break;
+        }
+        if(ok == 2)
+        {
+            all(n);
+            break;
+        } 
+        else
+        {
+            cout << "wrong input" << endl;
+        }
+     }
+    
+    
 }
